@@ -12,23 +12,27 @@
   <div class="wrapper">
     <header>
       <h1>
-        <a href="/">Tech Blog</a>
+        Tech Blog
       </h1>
 <nav>
+  
+  
   {{#if loggedIn}}
-  <a href="/dashboard">dashboard</a>
+  <a href="/">Homepage</a>
+  <a href="/dashboard">Dashboard</a>
+  
   <button id="logout" class="btn-no-style">logout</button>
   {{else}}
-  <a href="/login">login</a>
+  <a href="/">Homepage</a>
+  <a href="/dashboard">Dashboard</a>
+  <a href="/login">Login</a>
   {{/if}}
 </nav>
     </header>
     <main>
       {{{ body }}}
     </main>
-    <footer>
-      Thanks for visiting!
-    </footer>
+
   </div>
   
   {{#if loggedIn}}
