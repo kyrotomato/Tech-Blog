@@ -17,6 +17,7 @@ app.set('view engine', 'handlebars');
 //middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+//static file serving for stylesheet
 app.use(express.static(path.join(__dirname, 'public')));
 
 //sequelize listen function
