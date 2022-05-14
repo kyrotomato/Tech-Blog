@@ -7,18 +7,18 @@ const Comment = require('./Comment');
 //reverse association for above
 Post.belongsTo(User, {
     foreignKey: 'user_id',
-    onDelete: 'CASCADE'
+    onDelete: 'SET NULL'
 })
 
 Comment.belongsTo(User, {
     foreignKey: 'user_id',
-    onDelete: 'CASCADE'
+    onDelete: 'SET NULL'
 })
 
 
  Post.hasMany(Comment, {
      foreignKey: 'post_id',
-     onDelete: 'CASCADE'
+     onDelete: 'SET NULL'
  })
 
 module.exports = { User, Post, Comment };
