@@ -67,8 +67,6 @@ Post.init(
     modelName: 'post'
   }
 );
-Post.belongsTo(User, {
-  foreignKey: 'user_id'
-})
+
 
 module.exports = Post;
